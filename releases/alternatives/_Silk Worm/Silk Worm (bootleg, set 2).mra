@@ -1,0 +1,76 @@
+<misterromdescription>
+	<name>Silk Worm (bootleg, set 2)</name>
+	<region></region>
+	<homebrew>no</homebrew>
+	<bootleg>yes</bootleg>
+	<version></version>
+	<alternative></alternative>
+	<platform>Tecmo</platform>
+	<series></series>
+	<year>1988</year>
+	<manufacturer>Tecmo</manufacturer>
+	<category>Shooter - Horizontal</category>
+
+	<setname>silkwormb2</setname>
+	<parent>silkworm</parent>
+	<mameversion>0246</mameversion>
+	<rbf>tecmo</rbf>
+	<about></about>
+
+	<resolution>15kHz</resolution>
+	<rotation>horizontal</rotation>
+	<flip></flip>
+
+	<players>2 (simultaneous)</players>
+	<joystick>8-way</joystick>
+	<special_controls></special_controls>
+	<num_buttons>3</num_buttons>
+	<buttons default="A,B,X,R,L,Start" names="Fire 1,Fire 2,Tilt,Start,Coin,Pause"></buttons>
+
+	<switches default="80,30">
+		<dip bits="0,1" ids="2c/1cr,1c/1cr,1c/2cr,1c/3cr" name="Coinage" values="1,0,2,3"></dip>
+		<dip bits="4,5" ids="2,3,4,5" name="Lives" values="3,0,1,2"></dip>
+		<dip bits="7" ids="No,Yes" name="Demo Sounds"></dip>
+		<dip bits="8,9" ids="50K 200K 500K,100K 300K 800K,50K 200K,100K 300K" name="Bonus Life"></dip>
+		<dip bits="13,14" ids="Easy,Normal,Hard,Hardest" name="Difficulty"></dip>
+		<dip bits="15" ids="No,Yes" name="Allow Continue" values="1,0"></dip>
+		</switches>
+
+	<rom index="1">
+		<part>2</part>
+		</rom>
+	<rom index="0" md5="none" zip="silkworm.zip">
+		<!-- main cpu -->
+		<part crc="a10f2414" length="0xc000" name="silkwormb2/280100_pc-4.4"></part>
+		<part crc="a6c7bb51" name="silkwormb2/280100_pc-5.5"></part>
+		<!-- sound cpu -->
+		<part crc="5a880df9" name="silkwormb2/280100_pc-3.3"></part>
+		<!-- char -->
+		<part crc="e80a1cd9" name="silkwormb2/280100_pc-2.2"></part>
+		<!-- sprite -->
+		<part crc="1138d159" name="silkwormb2/280100_pc-6.6"></part>
+		<part crc="d96214f7" name="silkwormb2/280100_pc-7.7"></part>
+		<part crc="0494b38e" name="silkwormb2/280100_pc-8.8"></part>
+		<part crc="8ce3cdf5" name="silkwormb2/280100_pc-9.9"></part>
+		<!-- fg -->
+		<part crc="8c7138bb" name="silkwormb2/280100_pc-10.10"></part>
+		<part crc="c0c4687d" name="silkwormb2/280100_pc-11.11"></part>
+		<part crc="bb0f568f" name="silkwormb2/280100_pc-12.12"></part>
+		<part crc="fc472811" name="silkwormb2/280100_pc-13.13"></part>
+		<!-- bg -->
+		<part crc="409df64b" name="silkwormb2/280100_pc-14.14"></part>
+		<part crc="b02acdb6" name="silkwormb2/280100_pc-15.15"></part>
+		<part crc="caf7b25e" name="silkwormb2/280100_pc-16.16"></part>
+		<part crc="7ec93873" name="silkwormb2/280100_pc-17.17"></part>
+		<!-- pcm -->
+		</rom>
+	<rom index="2"></rom>
+	<rom index="3"></rom>
+	<rom index="4"></rom>
+
+	<nvram></nvram>
+
+	<remark></remark>
+
+	<mratimestamp>20220822</mratimestamp>
+</misterromdescription>
