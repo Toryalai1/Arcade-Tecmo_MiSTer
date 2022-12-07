@@ -35,17 +35,7 @@ jobs:
       - name: Run compilation flow
         run: quartus_sh --flow compile tecmo.qpf
         
-        # 5 - Get current version for tagging
-      - name: Get the version
-        id: version
-        run: echo "::set-output name=version::$(date +'%Y%m%d')"
-        
-        # 6 - Copy Artifacts
-      - name: Create a copy and tag with version
-        run: |
-          mkdir -p release
-          cp project/output_files/tecmo.rbf releases/tecmo_${{ steps.version.outputs.version }}.rbf
-          cp project/output_files/tecmo.fit.summary releases/tecmo.fit_${{ steps.version.outputs.version }}.txt
+
       ##########################################################################
       # 3 - Upload artifacts
       ##########################################################################
