@@ -249,6 +249,7 @@ wire        ioctl_wr;
 wire [26:0] ioctl_addr;
 wire  [7:0] ioctl_dout;
 wire [15:0] ioctl_index;
+wire  [7:0] ioctl_data;
 wire        direct_video;
 wire        forced_scandoubler;
 
