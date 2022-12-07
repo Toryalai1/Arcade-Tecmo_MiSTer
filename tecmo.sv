@@ -265,9 +265,10 @@ hps_io #(.CONF_STR(CONF_STR)) hps_io
   .direct_video(direct_video),
   .status_menumask(direct_video),
 
-  .ioctl_wr(ioctl_wr),
   .ioctl_addr(ioctl_addr),
-  .ioctl_dout(ioctl_dout),
+  .ioctl_dout(ioctl_data),
+  .ioctl_wr(ioctl_wr),
+  .ioctl_download(ioctl_download),
   .ioctl_index(ioctl_index),
 
   .joystick_0(joystick_0),
