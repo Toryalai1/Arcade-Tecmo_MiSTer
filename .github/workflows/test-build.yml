@@ -34,13 +34,19 @@ jobs:
       ##########################################################################
       - name: Run compilation flow
         run: quartus_sh --flow compile tecmo.qpf
-        
-
       ##########################################################################
-      # 3 - Upload artifacts
+      - name: Create Date Tag
+        id: version
+        run: echo "::set-output name=version::$(date +'%Y%m%d')"     # Use date as version
+      ##########################################################################
+      - name: Copy files and tag with date
+        run: |
+          mkdir -p staging
+          cp output_files/tecmo.rbf staging/tecmo_${{ steps.version.outputs.version }}.rbf
+          cp -R releases/*.mra staging
       ##########################################################################
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: tecmo_${{ steps.version.outputs.version }}
-          path: releases/
+          path: staging/
