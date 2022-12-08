@@ -304,6 +304,7 @@ wire       hblank, vblank;
 wire rotate_ccw = 0;
 wire no_rotate = status[2] | direct_video ;
 screen_rotate screen_rotate (.*);
+wire flip       = 0;
 
 arcade_video #(.WIDTH(256), .DW(12)) arcade_video
 (
