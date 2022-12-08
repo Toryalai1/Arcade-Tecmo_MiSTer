@@ -255,6 +255,7 @@ wire [31:0] status;
 wire        forced_scandoubler;
 wire [21:0] gamma_bus;
 wire        direct_video;
+wire        video_rotated;
 
 wire [24:0] ioctl_addr;
 wire  [7:0] ioctl_data;
@@ -277,6 +278,7 @@ hps_io #(.CONF_STR(CONF_STR)) hps_io
   .forced_scandoubler(forced_scandoubler),
   .gamma_bus(gamma_bus),
   .direct_video(direct_video),
+  .video_rotated(video_rotated),
 
   .ioctl_addr(ioctl_addr),
   .ioctl_dout(ioctl_data),
@@ -300,7 +302,7 @@ wire       hsync, vsync;
 wire       hblank, vblank;
 
 wire rotate_ccw = 0;
-wire no_rotate = status[2] | direct_video  ;
+wire no_rotate = status[2] | direct_video ;
 screen_rotate screen_rotate (.*);
 
 arcade_video #(.WIDTH(256), .DW(12)) arcade_video
