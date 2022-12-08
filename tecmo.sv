@@ -298,7 +298,10 @@ wire       ce_pix;
 wire [3:0] r, g, b;
 wire       hsync, vsync;
 wire       hblank, vblank;
-wire       no_rotate = ~status[2] & ~direct_video;
+
+wire rotate_ccw = 0;
+wire no_rotate = status[2] | direct_video  ;
+screen_rotate screen_rotate (.*);
 
 arcade_video #(.WIDTH(256), .DW(12)) arcade_video
 (
@@ -313,12 +316,7 @@ arcade_video #(.WIDTH(256), .DW(12)) arcade_video
   .fx(status[6:4])
 );
 
-screen_rotate screen_rotate
-(
-  .*,
-  .rotate_ccw(0),
-  .no_rotate(no_rotate)
-);
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // SDRAM
